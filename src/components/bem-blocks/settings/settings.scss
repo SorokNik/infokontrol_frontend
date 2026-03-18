@@ -1,0 +1,190 @@
+.settings {
+  padding: 5.4rem 0 4.4rem 0;
+  background: #E8F3F9;
+
+  .settings__wrapper{
+    padding: 9.8rem 6.9rem 21rem 8.3rem;
+    border-radius: 2.2rem;
+    background: #FFFFFF;
+    width: 145.3rem;
+    margin: 0 auto;
+    .settings__form {
+      .settings__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4.7rem;
+        row-gap: 1.7rem;
+        .settings__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .settings__label {
+            color: #595959FF;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+          }
+          .form-group {
+            width: 50rem;
+
+            .settings__input {
+              border-radius: 2.2rem;
+              background: #E8F3F9;
+              padding: 1.5rem 2rem;
+              width: 100%;
+              border: none;
+              font-size: 1.6rem;
+              line-height: 1.9rem;
+            }
+          }
+          .settings__name,
+          .settings__subscription,
+          .settings__manage-subscription {
+            color: #282828FF;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.9rem;
+          }
+          .settings__manage-subscription {
+            color: #404D59;
+            font-weight: 400;
+          }
+        }
+      }
+      .settings__item-username {
+        order: 1;
+      }
+      .settings__item-phone {
+        order: 3;
+      }
+      .settings__item-email {
+        order: 5;
+      }
+      .settings__item-password {
+        order: 2;
+      }
+      .settings__item-password-repeat {
+        order: 4;
+      }
+      .settings__item-subscription {
+        order: 6;
+      }
+      .settings__button {
+        width: 30rem;
+        height: 6.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2.2rem;
+        background: #F9A930;
+        color: #FFFFFFFF;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+        margin-top: 3.3rem;
+        margin-left: auto;
+        margin-right: 0;
+        border: none;
+        cursor: pointer;
+        @include button;
+      }
+    }
+  }
+}
+
+@include media('max', 'xl') {
+  .settings {
+    .settings__wrapper{
+      width: 100%;
+      .settings__form {
+        .settings__items {
+          .settings__item {
+            .form-group {
+              width: 45rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('max', 'l') {
+  .settings {
+    padding: 5.4rem 0;
+    .settings__wrapper{
+      padding: 6.9rem 6rem 6.8rem 7.1rem;
+      .settings__form {
+        .settings__items {
+          grid-template-columns: 1fr;
+          .settings__item {
+            .form-group {
+              width: calc(100% - 14rem);
+            }
+          }
+        }
+        .settings__item-username {
+          order: 1;
+        }
+        .settings__item-phone {
+          order: 2;
+        }
+        .settings__item-email {
+          order: 3;
+        }
+        .settings__item-password {
+          order: 4;
+        }
+        .settings__item-password-repeat {
+          order: 5;
+        }
+        .settings__item-subscription {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .settings {
+    padding: 2.8rem 0;
+    .settings__wrapper{
+      padding: 2.6rem 2.6rem 3.1rem 2.6rem;
+      .settings__form {
+        .settings__items {
+          row-gap: 1.2rem;
+          .settings__item {
+            .settings__label {
+              font-size: 1.5rem;
+              line-height: 1.8rem;
+            }
+            .form-group {
+              width: 21.5rem;
+            }
+          }
+          .settings__item-subscription {
+            display: grid;
+            grid-template-columns: auto 21.4rem;
+            margin-top: 1.6rem;
+            row-gap: 1.2rem;
+
+            .settings__subscription,
+            .settings__manage-subscription {
+              grid-column: 2/3;
+              margin-left: 2rem;
+            }
+          }
+        }
+
+        .settings__button {
+          width: 100%;
+          height: 5rem;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          margin-top: 2.8rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

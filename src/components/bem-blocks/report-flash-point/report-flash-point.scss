@@ -1,0 +1,95 @@
+$blue: #64ADED;
+$red: #FE485C;
+$white: #FFFFFF;
+$green: #2CBC99;
+
+.report-flash-point {
+  padding: 0.3rem 8rem 0.3rem 0.3rem;
+  border-radius: 5.3rem;
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  border: $blue solid 0.3rem;
+  justify-content: flex-start;
+  width: fit-content;
+
+  .report-flash-point__svg-wrapper {
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green;
+    flex-shrink: 0;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      flex-shrink: 0;
+    }
+  }
+
+  .report-flash-point__text {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 100%;
+  }
+
+  &-blue {
+    border: none;
+    background-color: $blue;
+
+    .report-flash-point__svg-wrapper {
+      background-color: $white;
+
+      svg {
+        fill: $blue;
+      }
+    }
+
+    .report-flash-point__text {
+      color: $white;
+    }
+  }
+
+  &-red {
+    border: none;
+    background-color: $red;
+
+    .report-flash-point__svg-wrapper {
+      background-color: $white;
+
+      svg {
+        fill: $red;
+      }
+    }
+
+    .report-flash-point__text {
+      color: $white;
+    }
+  }
+
+  &-info {
+
+    .report-flash-point__svg-wrapper {
+      background-color: $blue;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-flash-point {
+    padding: 0.3rem 1rem 0.3rem 0.3rem;
+    gap: 2rem;
+    width: 100%;
+
+    .report-flash-point__text {
+      font-size: 1.6rem;
+    }
+  }
+}

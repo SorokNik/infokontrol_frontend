@@ -1,0 +1,414 @@
+.about {
+  padding: 8.6rem 0;
+  background: radial-gradient(80.7% 159.91% at 17.63% -18.58%, #FFFFFF 0%, #D4E2E9 59.4%, #FFFFFF 89.98%);
+  &__white {
+    background: #FFFFFF;
+
+    .about__items {
+      .about__item {
+        border: 2px solid rgba(197, 217, 227, 1);
+      }
+    }
+  }
+
+  .about__title-block {
+    padding-left: 14.5rem;
+  }
+
+  .about__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: space-between;
+    margin-top: 3.8rem;
+
+    .about__item {
+      border-radius: 22px;
+      box-shadow: 0 0.6rem 1.43rem 0 rgba(0, 0, 0, 0.05);
+      background-color: #FFFFFFFF;
+      padding: 4.2rem 5.1rem 6.2rem 5.8rem;
+      position: relative;
+
+      .about__item-title {
+        color: #000000FF;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 3rem;
+        letter-spacing: -0.1rem;
+      }
+
+      .about__item-text {
+        margin-top: 2.3rem;
+        color: #474747FF;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        letter-spacing: -0.04rem;
+      }
+    }
+
+    .about__item::before {
+      content: '';
+      display: block;
+      @include bg;
+      position: absolute;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .about__item:nth-child(1) {
+      width: 57rem;
+      height: 33.1rem;
+      padding-left: 25.5rem;
+    }
+
+    .about__item:nth-child(1)::before {
+      top: 4.2rem;
+      left: -1.9rem;
+      width: 22.8rem;
+      height: 23.2rem;
+      background-image: url("../img/about/info.webp");
+    }
+
+    .about__item:nth-child(2) {
+      width: 57rem;
+      height: 33.1rem;
+      padding-left: 25.5rem;
+      background: url("../img/about/pledge.webp") -6.9rem 4.1rem / 27rem no-repeat, #FFFFFFFF;
+    }
+
+    .about__item:nth-child(3) {
+      width: 57rem;
+      height: 33.1rem;
+      padding-left: 25.5rem;
+    }
+
+    .about__item:nth-child(3)::before {
+      top: -1.5rem;
+      left: -2.6rem;
+      width: 31.1rem;
+      height: 36.1rem;
+      background-image: url("../img/about/phone.webp");
+    }
+
+    .about__item:nth-child(4) {
+      width: 86.3rem;
+      height: 33.1rem;
+      padding-left: 43.9rem;
+    }
+
+    .about__item:nth-child(4)::before {
+      top: 5.5rem;
+      left: 4.5rem;
+      width: 37.1rem;
+      height: 19.2rem;
+      background-image: url("../img/about/crushed.webp");
+    }
+
+    .about__item:nth-child(5) {
+      width: 42.3rem;
+      height: 33.1rem;
+      padding-left: 5.3rem;
+
+      .about__item-title {
+        white-space: nowrap;
+      }
+    }
+
+    .about__item:nth-child(5)::before {
+      bottom: -8.6rem;
+      left: 3.1rem;
+      width: 36.2rem;
+      height: 28.9rem;
+      background-image: url("../img/about/stick.webp");
+
+    }
+
+    .about__item:nth-child(6) {
+      width: 42.3rem;
+      height: 33.1rem;
+      padding-left: 5.8rem;
+
+      .about__item-title {
+        white-space: nowrap;
+      }
+    }
+
+    .about__item:nth-child(6)::before {
+      bottom: -4.8rem;
+      left: 16.7rem;
+      width: 31.2rem;
+      height: 22.8rem;
+      background-image: url("../img/about/photos.webp");
+    }
+  }
+}
+
+@include media('max', 'xl') {
+  .about {
+
+    .about__items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .about__item:nth-child(1) {
+        width: 100%;
+        grid-column: 1/2;
+      }
+
+      .about__item:nth-child(2) {
+        width: 100%;
+        grid-column: 2/3;
+      }
+
+      .about__item:nth-child(3) {
+        width: 100%;
+        grid-column: 1/3;
+        padding-left: 45rem;
+
+        .about__item-title {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .about__item:nth-child(4) {
+        width: 100%;
+        grid-column: 1/3;
+        padding-left: 45rem;
+      }
+
+      .about__item:nth-child(4)::before {
+        left: -1rem;
+      }
+
+      .about__item:nth-child(5) {
+        width: 100%;
+      }
+
+      .about__item:nth-child(6) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .about {
+    padding: 4.7rem 0 7rem 0;
+
+    .about__title-block {
+      padding-left: 0;
+    }
+
+    .about__items {
+      gap: 1.5rem;
+      margin-top: 5.9rem;
+
+      .about__item {
+        padding: 4.2rem 1.3rem 4.6rem 5.3rem;
+
+        .about__item-text {
+          font-size: 1.4rem;
+          line-height: 2.3rem;
+        }
+      }
+
+      .about__item:nth-child(1) {
+        padding-left: 18.8rem;
+      }
+
+      .about__item:nth-child(1)::before {
+        top: 2.6rem;
+        left: -2.6rem;
+        width: 19.4rem;
+        height: 19.7rem;
+      }
+
+      .about__item:nth-child(2) {
+        padding-left: 16.6rem;
+        background: url('../img/about/pledge.webp') -1rem 4.1rem / 16rem no-repeat, #fff;
+      }
+
+      .about__item:nth-child(3) {
+        padding: 4.9rem 4.1rem 0 26rem;
+        height: 22.8rem;
+      }
+
+      .about__item:nth-child(3)::before {
+        top: 0;
+        left: 2rem;
+        width: 19.6rem;
+        height: 22.7rem;
+      }
+
+      .about__item:nth-child(4) {
+        height: 27.2rem;
+        padding: 6.1rem 4.1rem 0 39rem;
+      }
+
+      .about__item:nth-child(4)::before {
+        top: 4rem;
+        left: 3rem;
+        width: 37.1rem;
+        height: 19.2rem;
+      }
+
+      .about__item:nth-child(5) {
+        height: 29.7rem;
+        padding: 4.1rem 3.8rem 0 5.3rem;
+
+        .about__item-title {
+          white-space: normal;
+        }
+
+        .about__item-text {
+          margin-top: 0.5rem;
+        }
+      }
+
+      .about__item:nth-child(5)::before {
+        bottom: -5.4rem;
+        left: 2.4rem;
+        width: 29.8rem;
+        height: 24.6rem;
+      }
+
+      .about__item:nth-child(6) {
+        height: 29.7rem;
+        padding: 4.2rem 11rem 0 5.8rem;
+
+        .about__item-title {
+          white-space: normal;
+        }
+
+        .about__item-text {
+          margin-top: 0.5rem;
+        }
+      }
+
+      .about__item:nth-child(6)::before {
+        bottom: -5.4rem;
+        left: 17rem;
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .about {
+    padding: 2.8rem 0 7.9rem 0;
+
+    .about__items {
+      gap: 2.9rem;
+      margin-top: 6.2rem;
+      grid-template-columns: 1fr;
+
+      .about__item {
+        padding: 2.5rem 2.5rem 0 14.7rem;
+        br {
+          display: none;
+        }
+
+        .about__item-title {
+          font-size: 2rem;
+          line-height: 2.5rem;
+          letter-spacing: -0.09rem;
+        }
+
+        .about__item-text {
+          margin-top: 1rem;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      .about__item:nth-child(1) {
+        height: 20rem;
+        padding-left: 14.7rem;
+        grid-column: 1/2;
+      }
+
+      .about__item:nth-child(1)::before {
+        top: 0.8rem;
+        left: -0.7rem;
+        width: 14.2rem;
+        height: 14.5rem;
+      }
+
+      .about__item:nth-child(2) {
+        height: 20rem;
+        padding-left: 14.7rem;
+        background: url('../img/about/pledge.webp') -1rem 2rem/13rem no-repeat, #fff;
+        grid-column: 1/2;
+      }
+
+      .about__item:nth-child(3) {
+        height: 21rem;
+        padding: 3rem 2.6rem 0 15.4rem;
+        grid-column: 1/2;
+      }
+
+      .about__item:nth-child(3)::before {
+        top: -1.5rem;
+        left: -0.7rem;
+        width: 16.3rem;
+        height: 18.9rem;
+      }
+
+      .about__item:nth-child(4) {
+        height: 21rem;
+        padding: 2.5rem 21.4rem 0 2.8rem;
+        grid-column: 1/2;
+
+        .about__item-title {
+          width: 14.3rem;
+        }
+      }
+
+      .about__item:nth-child(4)::before {
+        top: 3.9rem;
+        left: 17.9rem;
+        width: 22.6rem;
+        height: 11.7rem;
+      }
+
+      .about__item:nth-child(5) {
+        height: 18rem;
+        padding: 2.6rem 7.6rem 0 2.8rem;
+        grid-column: 1/2;
+
+        .about__item-text {
+          width: 14.5rem;
+        }
+
+      }
+
+      .about__item:nth-child(5)::before {
+        bottom: auto;
+        left: 13.8rem;
+        top: 1.7rem;
+        width: 23.4rem;
+        height: 19.2rem;
+
+      }
+
+      .about__item:nth-child(6) {
+        height: 18rem;
+        padding: 2.3rem 1.8rem 0 2.8rem;
+        grid-column: 1/2;
+
+        .about__item-text {
+          width: 25.2rem;
+        }
+      }
+
+      .about__item:nth-child(6)::before {
+        bottom: -5.1rem;
+        left: 22.6rem;
+        width: 22.8rem;
+        height: 16.7rem;
+      }
+    }
+  }
+}

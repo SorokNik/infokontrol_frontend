@@ -1,0 +1,20 @@
+<section class="authorization-form">
+    <div class="container">
+        <div class="authorization-form__wrapper">
+            <form action="" class="authorization-form__form">
+                <div class="authorization-form__title">Введите номер телефона и пароль для входа в систему</div>
+                <input type="tel" name="phone" id="" class="authorization-form__email" placeholder="Номер телефона">
+                <input type="password" name="password" id="" class="authorization-form__password" placeholder="Пароль">
+                <div class="authorization-form__checkbox-block">
+                    @@include('../checkbox/checkbox.html', {"checkbox-text":"Запомнить меня",})
+                    <a href="#" class="authorization-form__forgot">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="authorization-form__button">Войти</button>
+            </form>
+            <div class="authorization-form__registration-block">
+                <div class="authorization-form__question --svg__arrow-after">У вас уже есть учетная запись?</div>
+                <a href="#" class="authorization-form__registration-link">Войти здесь</a>
+            </div>
+        </div>
+    </div>
+</section>

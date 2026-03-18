@@ -1,0 +1,16 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512.000000" height="512.000000" fill="none" customFrame="#000000">
+    <defs>
+        <radialGradient id="paint_radial_0" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(139.636,0,0,139.636,255.999,256.012)">
+            <stop stop-color="rgb(111,170,199)" offset="0.600000024" stop-opacity="1" />
+            <stop stop-color="rgb(50,116,158)" offset="1" stop-opacity="1" />
+        </radialGradient>
+    </defs>
+    <rect id="Favicon" width="512.000000" height="512.000000" x="0.000000" y="0.000000" />
+    <g id="Favicon">
+        <circle id="Ellipse 228" cx="254.5" cy="256.5" r="254.5" fill="rgb(255,255,255)" />
+        <circle id="Ellipse 9" cx="255.999496" cy="256.012329" r="139.636337" fill="url(#paint_radial_0)" />
+        <path id="Intersect" d="M310.488 127.39C343.809 141.526 370.505 168.233 384.626 201.561C384.977 204.114 385.155 206.623 385.155 209.07C385.155 219.51 381.927 228.822 375.183 235.566C357.006 253.743 320.167 246.375 292.902 219.109C275.752 201.959 266.474 181.022 266.474 163.323C266.474 152.884 269.702 143.572 276.445 136.828C284.778 128.495 297.032 125.531 310.488 127.39Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+        <circle id="Ellipse 8" cx="255.99765" cy="255.98642" r="26.9473629" fill="rgb(255,255,255)" />
+        <path id="Union" d="M256 0C397.385 0 512 114.615 512 256C512 397.385 397.385 512 256 512C114.615 512 0 397.385 0 256C0 114.615 114.615 0 256 0ZM256 46.5454C140.321 46.5454 46.5455 140.321 46.5455 256C46.5455 371.678 140.321 465.454 256 465.454C371.679 465.454 465.455 371.678 465.455 256C465.455 140.321 371.679 46.5454 256 46.5454Z" fill="rgb(30,34,40)" fill-rule="evenodd" />
+    </g>
+</svg>

@@ -1,0 +1,48 @@
+.report-mileage {
+  .report-mileage__table {
+    margin-top: 4rem;
+    table {
+      border-collapse: collapse;
+      font-size: 2rem;
+      width: 42.4rem;
+      thead {
+        border-bottom: 2px solid #000000;
+        th {
+          text-align: left;
+          font-weight: 600;
+          padding: 0.5rem 0;
+        }
+      }
+      tbody {
+        tr {
+          border-bottom: 1px solid #D0D0D0;
+          td {
+            padding: 0.7rem 0;
+            &:first-child {
+              padding-top: 1.4rem;
+            }
+          }
+          &:first-child {
+            td {
+              padding-top: 2rem;
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-mileage {
+    .report-mileage__table {
+      table {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.report-head {
+  background: radial-gradient(45.94% 145.3% at 50% 106.18%, rgba(113, 184, 223, 0.32) 0%, rgba(132, 195, 229, 0.32) 61.39%, rgba(229, 246, 255, 0.32) 69.37%, rgba(97, 148, 177, 0.32) 100%),
+  linear-gradient(0deg, #E8F3F9, #E8F3F9);
+
+  padding-top: 6rem;
+   .report-head__wrapper {
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     .report-head__title-block {
+       //color: #FFFFFF;
+       .report-head__subtitle {
+         font-weight: 500;
+         font-size: 3.6rem;
+         line-height: 100%;
+       }
+       .report-head__title {
+         font-weight: 800;
+         font-size: 7rem;
+         line-height: 100%;
+         margin-top: 2rem;
+
+         .report-head__number {
+            white-space: nowrap;
+         }
+       }
+     }
+     .report-head__qr {
+       @include bg;
+       width: 13rem;
+       aspect-ratio: 1/1;
+       flex-shrink: 0;
+     }
+   }
+  .report-head__photo {
+    margin-top: 4.4rem;
+    width: 100%;
+    height: 63rem;
+    background-color: #474747;
+    @include bg('cover', 'center');
+  }
+}
+
+@include media('max', 'xl') {
+  .report-head {
+    .report-head__photo {
+      height: 48rem;
+    }
+  }
+}
+
+@include media('max', 'l') {
+  .report-head {
+    .report-head__photo {
+      height: 42rem;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .report-head {
+
+    padding-top: 6rem;
+    .report-head__wrapper {
+      .report-head__title-block {
+        .report-head__subtitle {
+          font-size: 2rem;
+        }
+        .report-head__title {
+          font-size: 4rem;
+          margin-top: 2rem;
+
+          .report-head__number {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .report-head__photo {
+      height: 27rem;
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-head {
+    padding-top: 3rem;
+    .report-head__wrapper {
+      gap: 3rem;
+      .report-head__title-block {
+        .report-head__subtitle {
+          font-weight: 500;
+          font-size: 1.3rem;
+        }
+        .report-head__title {
+          font-size: 2rem;
+          margin-top: 2rem;
+
+          .report-head__number {
+            white-space: nowrap;
+          }
+        }
+      }
+      .report-head__qr {
+        @include bg;
+        width: 8.3rem;
+      }
+    }
+    .report-head__photo {
+      margin-top: 3rem;
+      height: 14rem;
+    }
+  }
+}

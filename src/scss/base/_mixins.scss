@@ -1,0 +1,96 @@
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: local("#{$file}"),
+		url('../fonts/#{$file}.woff2') format('woff2'),
+		url('../fonts/#{$file}.woff') format('woff'),
+		url('../fonts/#{$file}.ttf') format('ttf');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+@mixin bg ($size:"contain", $position: "center") {
+	background-size: #{$size};
+	background-position: #{$position};
+	background-repeat: no-repeat;
+}
+
+@mixin button  {
+	cursor: pointer;
+	border: none;
+	&:hover {
+	background-color: #FFC267;
+	}
+	&:active {
+		background-color: #EF8E1F;
+	}
+}
+
+@mixin btn_anim($scaleMax:1.05, $scaleMin:0.95) {
+	transform-origin: center center;
+	transition: all ease-out 240ms;
+
+	&:hover {
+		transform: scale(#{$scaleMax});
+	}
+
+	&:focus {
+		outline: transparent;
+	}
+
+	&:focus-visible {
+		transform: scale(#{$scaleMax}) translateY(-5%);
+	}
+
+	&:active {
+		transform: scale(#{$scaleMin});
+	}
+}
+
+@mixin no-btn ($display:"inline-block") {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: transparent;
+	border-radius: 0;
+	cursor: pointer;
+	appearance: none;
+	display: #{$display};
+}
+
+@mixin transit ($tr:0.24) {
+	transition: all #{$tr}s;
+}
+
+$sizes: ("xs":320px, "s":576px, "m":1050px, "l":1200px, "xl":1400px, "xxl":1920px);
+
+@mixin media($minmax, $media) {
+	@each $size, $resolution in $sizes {
+		@if $media == $size {
+			@if ($minmax != "within") {
+				@media only screen and (#{$minmax}-width: $resolution) {
+					@content;
+				}
+			} @else {
+				@if (index(map-keys($sizes), $media) > 1) {
+					@media only screen and (min-width: getPreviousSize($media)+1) and (max-width: $resolution) {
+						@content;
+					}
+				} @else {
+					@media only screen and (max-width: $resolution) {
+						@content;
+					}
+				}
+			}
+		}
+	}
+}
+
+@function getPreviousSize($currentSize) {
+	$keys: map-keys($sizes);
+	$index: index($keys, $currentSize)-1;
+	$value: map-values($sizes);
+	@return nth($value, $index);
+}

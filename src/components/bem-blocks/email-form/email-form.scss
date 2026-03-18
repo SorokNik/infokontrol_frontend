@@ -1,0 +1,154 @@
+.email-form {
+  padding: 0 14.6rem;
+  display: flex;
+  align-items: center;
+
+  .email-form__input-block {
+    position: relative;
+  }
+
+  #error-email {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .email-form__input {
+    width: 86.5rem;
+    padding: 2.1rem 3.9rem;
+    border: none;
+    border-radius: 2.2rem;
+    background: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  .email-form__input::placeholder {
+    color: rgba(89, 89, 89, 1);
+  }
+
+  .email-form__offer,
+  .email-form__discount {
+    width: 16.2rem;
+    color: #282828FF;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 3rem;
+    letter-spacing: -0.04rem;
+    text-align: right;
+    margin-left: 3.8rem;
+  }
+
+  .email-form__discount {
+    color: #FF3737FF;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 2.5rem;
+  }
+
+  .email-form__timer-wrapper {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    svg {
+      fill: #888888FF;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    .email-form__timer {
+      width: 8rem;
+      color: #888888FF;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.9rem;
+      letter-spacing: -0.04rem;
+      text-align: left;
+    }
+  }
+}
+
+@include media('max', 'xl') {
+  .email-form {
+    padding: 0;
+  }
+}
+
+@include media('max', 'l') {
+  .email-form {
+    .email-form__input {
+      width: 65rem;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .email-form {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+
+
+    .email-form__input-block {
+      width: 100%;
+    }
+
+    #error-email {
+      position: static;
+      transform: none;
+      width: 100%;
+    }
+
+    .email-form__input {
+      width: 100%;
+    }
+
+    .email-form__offer,
+    .email-form__discount {
+      width: auto;
+      margin-left: 0;
+    }
+
+    .email-form__discount {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@include media('max', 's') {
+  .email-form {
+
+    .email-form__input {
+      padding: 1.5rem 2.5rem;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
+
+    .email-form__offer,
+    .email-form__discount {
+      width: 13rem;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    .email-form__timer-wrapper {
+      gap: 1.4rem;
+
+      svg {
+        width:  2.9rem;
+        height: 2.9rem;
+      }
+
+      .email-form__timer {
+        width: 6.5rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+}

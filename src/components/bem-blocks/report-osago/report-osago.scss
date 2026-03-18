@@ -1,0 +1,19 @@
+.report-osago {
+  .report-osago__items {
+    margin-top: 7rem;
+    .report-osago__item {
+      grid-column: span 3;
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-osago {
+    .report-osago__items {
+      margin-top: 5rem;
+      .report-osago__item {
+        grid-column: auto;
+      }
+    }
+  }
+}

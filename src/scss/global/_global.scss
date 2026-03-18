@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+$main-font: "Onest", sans-serif;
+$main-color: #000;
+
+html {
+	font-size: .52vw;
+	font-family: $main-font;
+	font-weight: 400;
+	font-style: normal;
+	color: $main-color;
+}
+
+body {
+	font-size: 1.3rem;
+	background: #FFFFFF;
+
+	main{
+		width: 100%;
+		overflow: hidden;
+		scroll-behavior: smooth;
+	}
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 174.6rem;
+	margin: 0 auto;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.--mobile-only {
+	display: none;
+}
+
+.hide {
+	display: none;
+}
+
+button {
+	@include button;
+}
+
+@include media('min', 'xxl') {
+	html{
+		font-size: 10px;
+	}
+}
+
+@include media('max', 'xl') {
+	html{
+		font-size: 0.7vw;
+	}
+
+	.container {
+		width: 138rem;
+	}
+}
+
+@include media('max', 'l') {
+	html{
+		font-size: 0.8vw;
+	}
+
+	.container {
+		width: 120rem;
+	}
+}
+
+@include media('max', 'm') {
+	html{
+		font-size: 1.2vw;
+	}
+
+	.container{
+		width: 76.5rem;
+	}
+}
+
+@include media('max', 's') {
+	html{
+		font-size: 2.34vw;
+	}
+
+	.container{
+		width: 38.8rem;
+		margin: 0 auto;
+	}
+
+	.--mobile-only {
+		display: block;
+	}
+}

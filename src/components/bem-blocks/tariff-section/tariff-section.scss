@@ -1,0 +1,25 @@
+.tariff-section {
+  padding: 8.5rem 0;
+  background: #E8F3F9;
+  .tariff-section__email-form {
+    margin-top: 5.3rem;
+  }
+}
+
+@include media('max', 'm') {
+  .tariff-section {
+    padding: 5.8rem 0;
+    .tariff-section__email-form {
+      margin-top: 3.1rem;
+    }
+  }
+}
+
+@include media('max', 's') {
+  .tariff-section {
+    padding: 5.9rem 0 2.9rem 0;
+    .tariff-section__email-form {
+      margin-top: 2.3rem;
+    }
+  }
+}

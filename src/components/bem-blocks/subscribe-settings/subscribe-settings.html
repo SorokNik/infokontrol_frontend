@@ -1,0 +1,104 @@
+<!--<section class="settings">-->
+<!--    <div class="container">-->
+<!--        <div class="settings__wrapper">-->
+<!--            <form action="" class="settings__form">-->
+<!--                <div class="settings__items">-->
+<!--                    <div class="settings__item settings__item-username">-->
+<!--                        <div class="settings__label">Ваше имя</div>-->
+<!--                        <input type="text" name="" id="" class="settings__input" placeholder="Не указано">-->
+<!--                    </div>-->
+<!--                    <div class="settings__item settings__item-phone">-->
+<!--                        <div class="settings__label">Телефон</div>-->
+<!--                        <input type="text" name="" id="" class="settings__input" placeholder="Не указан">-->
+<!--                    </div>-->
+<!--                    <div class="settings__item settings__item-email">-->
+<!--                        <div class="settings__label">E-mail</div>-->
+<!--                        <input type="email" name="" id="" class="settings__input" placeholder="E-mail">-->
+<!--                    </div>-->
+<!--                    <div class="settings__item settings__item-password">-->
+<!--                        <div class="settings__label">Пароль</div>-->
+<!--                        <input type="password" name="" id="" class="settings__input">-->
+<!--                    </div>-->
+<!--                    <div class="settings__item settings__item-password-repeat">-->
+<!--                        <div class="settings__label">Повтор пароля</div>-->
+<!--                        <input type="password" name="" id="" class="settings__input">-->
+<!--                    </div>-->
+<!--                    <div class="settings__item settings__item-subscription">-->
+<!--                        <div class="settings__name">Подписка:</div>-->
+<!--                        <div class="settings__subscription">Активна до: 01.01.2026</div>-->
+<!--                        <a href="#" class="settings__manage-subscription">Отменить</a>-->
+<!--                        <a href="#" class="settings__manage-subscription">Продлить подписку</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <button class="settings__button">Сохранить изменения</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+
+<section class="settings">
+    <div class="container">
+        <div class="settings__wrapper">
+
+            <form id="w0" class="settings__form" action="/dash/settings" method="post">
+                <input type="hidden" name="_csrf"
+                       value="PL9lnCox7dBxWWyUiIMS8IOjVyJqdpXNcv2E4M_ZvVUPhyrJGEfVhxltDt_97iuUzO0BDz8-zaQbxO_VvZ7_Gg==">
+                <div class="settings__items">
+                    <div class="settings__item settings__item-username">
+                        <div class="settings__label">Ваше имя</div>
+                        <div class="form-group field-settingform-username">
+                            <input type="text" id="settingform-username" class="settings__input form-control"
+                                   name="SettingForm[username]" value="maximtarov1211@yandex.ru"
+                                   placeholder="Не указано">
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <div class="settings__item settings__item-phone">
+                        <div class="settings__label">Телефон</div>
+                        <div class="form-group field-settingform-phone">
+                            <input type="tel" id="settingform-phone" class="settings__input form-control"
+                                   name="SettingForm[phone]" value="79610289975556666" maxlength="11"
+                                   placeholder="7XXXXXXXXXX" pattern="7\d{10}">
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <div class="settings__item settings__item-email">
+                        <div class="settings__label">E-mail</div>
+                        <div class="form-group field-settingform-email">
+                            <input type="email" id="settingform-email" class="settings__input form-control"
+                                   name="SettingForm[email]" value="maximtarov1211@yandex.ru" placeholder="E-Mail">
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <div class="settings__item settings__item-password">
+                        <div class="settings__label">Пароль</div>
+                        <div class="form-group field-settingform-password">
+                            <input type="password" id="settingform-password" class="settings__input form-control"
+                                   name="SettingForm[password]" placeholder="">
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <div class="settings__item settings__item-password-repeat">
+                        <div class="settings__label">Повтор пароля</div>
+                        <div class="form-group field-settingform-passwordconfirm">
+                            <input type="password" id="settingform-passwordconfirm" class="settings__input form-control"
+                                   name="SettingForm[passwordConfirm]" placeholder="">
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+
+                    <div class="settings__item settings__item-subscription">
+                        <div class="settings__name">Подписка:</div>
+                        <div class="settings__subscription">
+                            Активна до: 01.02.2026
+                        </div>
+                        <a href="/dash/cancel-subscribe" class="settings__manage-subscription">Отменить</a>
+                        <a href="/tariff" class="settings__manage-subscription">Продлить подписку</a>
+                    </div>
+                </div>
+                <button type="submit" class="settings__button">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+</section>

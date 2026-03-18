@@ -1,0 +1,29 @@
+.map {
+  width: 100%;
+  height: 53rem;
+  .map__wrapper {
+    width: 100%;
+    height: 53rem;
+    background: url("../img/map/map-bg.webp") center center no-repeat / cover;
+  }
+}
+
+@include media('max', 'm') {
+  .map {
+    height: 27.7rem;
+    .map__wrapper {
+      height: 27.7rem;
+      background: url("../img/map/map-bg-tablet.webp") center center no-repeat / cover;
+    }
+  }
+}
+
+@include media('max', 's') {
+  .map {
+    height: 53rem;
+    .map__wrapper {
+      height: 53rem;
+      background: url("../img/map/map-bg-mobile.webp") center center no-repeat / cover;
+    }
+  }
+}

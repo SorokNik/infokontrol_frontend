@@ -1,0 +1,882 @@
+.train-schedule {
+  padding: 5.4rem 0 4.4rem 0;
+  background: #E8F3F9;
+
+  .train-schedule__wrapper {
+    width: 145.3rem;
+    margin: 0 auto;
+    padding: 8.6rem 6rem;
+    border-radius: 2.2rem;
+    background: #FFFFFF;
+    position: relative;
+
+
+    .train-schedule__items {
+      margin-top: 5rem;
+      position: relative;
+
+      &.avia {
+        margin-top: 0;
+      }
+
+      .trips-found {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        .trips-found__title {
+          font-size: 3rem;
+        }
+        .trips-found__text {
+          font-size: 2rem;
+        }
+
+        &-not {
+          padding: 0;
+        }
+      }
+
+      .train-results-block {
+        padding: 1.7rem 2.6rem 3rem;
+        border-top: 1px solid #5f6a6e;
+
+        &:last-child {
+          border-bottom: 1px solid #5f6a6e;
+        }
+
+        .train-results-block__top {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          .train-results-block-logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.4rem;
+
+            .train-results-block-logo__img {
+              @include bg;
+              display: block;
+              width: 3rem;
+              height: 3rem;
+            }
+
+            span {
+              font-weight: 300;
+              font-size: 1.2rem;
+              line-height: 1.6rem;
+              color: #7d7d7e;
+            }
+
+
+          }
+        }
+
+        .train-results-block__center {
+          display: flex;
+          margin-top: 3rem;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          .train-results-block__group {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 4rem;
+          }
+
+          .train-results-block-route {
+            display: flex;
+            width: 10rem;
+            max-width: 20.5rem;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+
+          .train-results-block-route__content {
+
+            strong {
+              display: block;
+              font-weight: 700;
+              font-size: 3.6rem;
+              line-height: 120%;
+              color: #1e2228;
+              margin-bottom: 0.4rem;
+
+              span {
+                display: inline;
+                font-weight: 300;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                padding-left: 1rem;
+              }
+            }
+
+            span {
+              display: block;
+              font-weight: 300;
+              font-size: 1.2rem;
+              line-height: 1.6rem;
+              color: #7d7d7e;
+            }
+          }
+
+          .train-results-block-direct {
+            width: fit-content;
+            flex-shrink: 0;
+            max-width: 6rem;
+            font-weight: 300;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            color: #7d7d7e;
+          }
+
+          .train-results-block-cost {
+            font-size: 1.2rem;
+            line-height: 1;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            width: 26rem;
+
+            .span {
+              display: block;
+              margin-bottom: 0.3rem;
+              font-weight: 300;
+              font-size: 1.2rem;
+              line-height: 1.6rem;
+              color: #7d7d7e;
+            }
+          }
+
+          .train-results-block-cost__item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: space-between;
+            width: 100%;
+
+            .train-results-block-cost__group {
+              text-transform: capitalize;
+            }
+
+            .train-results-block-cost__summ {
+              font-weight: 700;
+              font-size: 1.8rem;
+              color: #1e2228;
+            }
+          }
+        }
+
+        .train-results-block__bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .train-results-block-buy {
+          margin-top: 2.4rem;
+          display: block;
+          width: 26rem;
+          margin-left: auto;
+          padding: 1.5rem 0;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2rem;
+          text-align: center;
+          border-radius: 2.2rem;
+          color: #FFFFFF;
+          background: #F9A930;
+          @include button;
+        }
+      }
+    }
+    .airplane-results.results._airplane {
+      margin-top: 5rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      .airplane-results-widget {
+        padding: 0.1rem 3rem 0;
+      }
+
+      .airplane-results-widget-header {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding-top: 3.1rem;
+      }
+
+      .airplane-results-widget-header__updated {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: #7d7d7e;
+      }
+
+      .airplane-results-widget-header__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1.3rem 0.3rem;
+        border: 0.1rem solid #d9e4ea;
+        border-left: 0;
+        background-color: #f4f8fb;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #1e2228;
+        text-align: center;
+        word-wrap: anywhere;
+
+        &:hover {
+          cursor: default;
+        }
+
+        &._current {
+          position: relative;
+          max-width: 18.6rem;
+          color: #FFFFFF;
+          background-color: #F9A930;
+          border-color: #F9A930;
+
+          em {
+            position: absolute;
+            top: -3.3rem;
+            right: -0.1rem;
+            left: -0.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 3.1rem;
+            max-height: 3.1rem;
+            border-radius: 1rem 1rem 0 0;
+            background-color: #F9A930;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+          }
+        }
+
+        &._time {
+          border-left: 0.1rem solid #d9e4ea;
+          overflow: hidden;
+
+          strong {
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #1e2228;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      .airplane-results-widget-body {
+        position: relative;
+      }
+
+      .airplane-results-widget-body__arrow {
+        position: absolute;
+        top: 50%;
+        left: calc(100vw - 5rem);
+        z-index: 9;
+        display: none;
+        transform: translateY(-50%);
+      }
+
+      .airplane-results-widget-body-dates {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-top: -0.1rem;
+      }
+
+      .airplane-results-widget-body-dates__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1.3rem 0.3rem;
+        border: 0.1rem solid #d9e4ea;
+        border-left: 0;
+        background-color: #FFFFFF;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: #4f5b66;
+        text-align: center;
+        word-wrap: anywhere;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0.4rem;
+          bottom: 0.4rem;
+          width: 0;
+          height: 0;
+          border-bottom: 1rem solid #F9A930;
+          border-left: 1rem solid transparent;
+        }
+
+        &._time {
+          border-left: 0.1rem solid #d9e4ea;
+          background-color: #f4f8fb;
+          font-weight: 300;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+          color: #1e2228;
+
+          &:hover {
+            cursor: default;
+          }
+
+          &::after {
+            display: none;
+          }
+
+          span {
+            padding: 0 0.2rem;
+          }
+        }
+
+        &._current {
+          max-width: 18.6rem;
+          border-color: #F9A930;
+          background-color: #fff0d8;
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          color: #1e2228;
+        }
+
+        &._active {
+          color: #FFFFFF;
+          border-color: #F9A930;
+          border-left: 0;
+          background-color: #F9A930;
+        }
+
+        &._empty {
+          font-weight: 400;
+          font-size: 1.8rem;
+          color: #c9d3da;
+
+          &:hover {
+            cursor: not-allowed;
+          }
+
+          &::after {
+            display: none;
+          }
+
+          &._current {
+            font-weight: 700;
+            line-height: 2.2rem;
+            color: #1e2228;
+          }
+        }
+      }
+
+      .airplane-results-widget-body-blocks {
+        display: none;
+
+        &._active {
+          display: block;
+          padding: 2rem 0;
+        }
+      }
+
+      .airplane-results-widget-body-blocks__hide {
+        padding-top: 2.8rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        text-align: center;
+        color: #F9A930;
+
+        span {
+          padding-bottom: 0.4rem;
+          border-bottom: 0.1rem dashed #F9A930;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .airplane-results-widget-footer {
+        padding: 3rem 0 4rem;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #4f5b66;
+        text-align: center;
+      }
+
+      .airplane-results-block {
+        padding: 1.7rem 2.6rem 3rem;
+        border-top: 0.1rem solid #F9A930;
+
+        &:last-child {
+          border-bottom: 0.1rem solid #F9A930;
+        }
+      }
+
+      .airplane-results-block__top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .airplane-results-block-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.4rem;
+
+        img {
+          display: block;
+          width: 3rem;
+        }
+
+        span {
+          font-weight: 300;
+          font-size: 1.2rem;
+          line-height: 1.6rem;
+          color: #7d7d7e;
+        }
+      }
+
+      .airplane-results-block__center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0 2.8rem;
+      }
+
+      .airplane-results-block__group {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4rem;
+      }
+
+      .airplane-results-block-route {
+        display: flex;
+        width: 100%;
+        max-width: 20.5rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .airplane-results-block-route__content {
+        white-space: nowrap;
+
+        strong {
+          display: block;
+          margin-bottom: 0.4rem;
+          font-weight: 700;
+          font-size: 3.6rem;
+          line-height: 120%;
+          color: #F9A930;
+
+          span {
+            display: inline;
+            padding-left: 1rem;
+            font-weight: 300;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+          }
+        }
+
+        span {
+          display: block;
+          font-weight: 300;
+          font-size: 1.2rem;
+          line-height: 1.6rem;
+          color: #7d7d7e;
+        }
+      }
+
+      .airplane-results-block-direct {
+        width: 100%;
+        max-width: 12rem;
+        margin: 0 4rem;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: #7d7d7e;
+      }
+
+      .airplane-results-block-cost {
+        font-size: 1.2rem;
+        line-height: 1;
+        text-align: right;
+
+        span {
+          display: block;
+          margin-bottom: 0.3rem;
+          font-weight: 300;
+          font-size: 1.2rem;
+          line-height: 1.6rem;
+          color: #7d7d7e;
+        }
+      }
+
+      .airplane-results-block-cost__summ {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        color: #F9A930;
+      }
+
+      .airplane-results-block__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .airplane-results-block-buy {
+        display: block;
+        width: 30.4rem;
+        margin-left: auto;
+        padding: 1.5rem 0;
+        border-radius: 2.2rem;
+        background-color: #F9A930;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: #FFFFFF;
+        text-align: center;
+        @include button;
+      }
+    }
+  }
+}
+
+@include media('max', 'xl') {
+  .train-schedule {
+    .train-schedule__wrapper {
+      width: 100%;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .train-schedule {
+    padding: 5.4rem 0 5.4rem 0;
+    .train-schedule__wrapper {
+      padding: 1.4rem 2.6rem;
+      .train-schedule__items {
+        .trips-found {
+          display: flex;
+          justify-content: normal;
+          align-items: flex-start;
+          padding: 1rem 0;
+          flex-direction: column;
+          gap: 0.5rem;
+          .trips-found__title {
+            font-size: 2rem;
+          }
+          .trips-found__text {
+            font-size: 1.5rem;
+          }
+        }
+        .train-results-block {
+
+          .train-results-block__center {
+
+
+            .train-results-block-cost {
+              width: 20rem;
+            }
+          }
+
+          .train-results-block-buy {
+            width: 20rem;
+          }
+        }
+      }
+      .airplane-results.results._airplane {
+        .airplane-results-widget {
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+
+        .airplane-results-widget-header__updated {
+          left: 0;
+          right: auto;
+          width: 100%;
+          max-width: calc(100vw - 4.2rem);
+          text-align: center;
+        }
+
+        .airplane-results-widget-header__item {
+          font-size: 1.2rem;
+        }
+
+        .airplane-results-widget-body-dates__item {
+          font-size: 1.2rem;
+
+          &._time {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .train-schedule {
+    padding: 2.8rem 0;
+
+    .train-schedule__wrapper {
+      padding: 3.9rem 2.6rem 2.3rem 2.6rem;
+
+      .train-schedule__items {
+        &.avia {
+          width: calc(38.3rem - 5.2rem);
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .train-results-block {
+
+          .train-results-block__center {
+            flex-direction: column;
+            gap: 3rem;
+
+            .train-results-block__group {
+              justify-content: space-between;
+              width: 100%;
+              gap: normal;
+            }
+
+            .train-results-block-route {
+              width: 8rem;
+              flex-shrink: 0;
+            }
+
+            .train-results-block-route__content {
+
+              strong {
+                font-size: 3rem;
+                line-height: normal;
+
+              }
+
+            }
+
+            .train-results-block-direct {
+              width: 5rem;
+              margin: 0;
+              flex-shrink: 0;
+            }
+
+            .train-results-block-cost {
+              width: 100%;
+
+            }
+
+          }
+
+          .train-results-block-buy {
+            width: 100%;
+          }
+        }
+      }
+      .airplane-results.results._airplane {
+        margin-top: 3rem;
+        margin-right: 1rem;
+
+        .airplane-results-widget {
+          padding: 0.1rem 1rem 0;
+        }
+
+        .airplane-results-widget-header {
+          width: 100%;
+          min-width: 55.2rem;
+        }
+
+        .airplane-results-widget-header__updated {
+          top: 0;
+          left: 0;
+          right: auto;
+          width: 100%;
+          max-width: calc(100vw - 4.2rem);
+          text-align: center;
+        }
+
+        .airplane-results-widget-header__item {
+          padding: 1.3rem 0.3rem;
+          font-size: 1.2rem;
+
+          &._current {
+            em {
+              display: none;
+            }
+          }
+
+          &._time {
+            position: relative;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -0.1rem;
+              left: -1.3rem;
+              z-index: 9;
+              width: 1.2rem;
+              height: 999vh;
+              background: #FFFFFF;
+            }
+          }
+        }
+
+        .airplane-results-widget-body {
+          width: 100%;
+          min-width: 55.2rem;
+        }
+
+        .airplane-results-widget-body-blocks {
+          .train-schedule__items {
+            &.avia {
+              --avia-card-width: calc(38.3rem - 5.2rem);
+              width: var(--avia-card-width);
+              margin-left: 0;
+              margin-right: 0;
+              position: sticky;
+              left: calc(40vw - (var(--avia-card-width) / 2));
+              transform: none;
+            }
+          }
+        }
+
+        .airplane-results-widget-body-dates__item {
+          flex-direction: column;
+          padding: 0.5rem 0;
+          font-size: 1.2rem;
+
+          &._time {
+            span {
+              display: block;
+              margin: -0.5rem 0;
+              padding: 0 0.2rem;
+              line-height: 1;
+            }
+          }
+
+          &._current,
+          &._empty._current {
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+        }
+
+        .airplane-results-widget-body-blocks {
+          &._active {
+            padding: 2rem 0;
+          }
+        }
+
+        .airplane-results-widget-body-blocks__hide {
+          width: 100%;
+          padding-top: 1.5rem;
+        }
+
+        .airplane-results-widget-footer {
+          padding: 1.3rem 0.8rem;
+          font-size: 1.2rem;
+          line-height: 120%;
+        }
+
+        .airplane-results-block {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0.7rem 0 2rem;
+        }
+
+        .airplane-results-block__top {
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .airplane-results-block__center {
+          flex-direction: column;
+          width: 100%;
+          margin-top: 2.5rem;
+        }
+
+        .airplane-results-block-route__content {
+          text-align: center;
+          white-space: normal;
+
+          > span {
+            white-space: normal !important;
+          }
+
+          strong {
+            margin-bottom: 1rem;
+            font-size: 2.4rem;
+
+            span {
+              display: block;
+              padding-left: 0;
+            }
+          }
+
+          span {
+            font-size: 1rem;
+            line-height: 1.2rem;
+          }
+        }
+
+        .airplane-results-block-direct {
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .airplane-results-block-cost {
+          display: flex;
+          align-items: center;
+          margin-top: 3rem;
+          text-align: left;
+        }
+
+        .airplane-results-block-cost__summ {
+          margin-right: 1.2rem;
+          margin-bottom: 0;
+        }
+
+        .airplane-results-block__bottom {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .airplane-results-block-buy {
+          order: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

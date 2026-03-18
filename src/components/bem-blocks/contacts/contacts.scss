@@ -1,0 +1,231 @@
+.contacts {
+  padding: 8.6rem 0;
+  background: #E8F3F9;
+
+  .contacts__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.7rem;
+    width: 145.3rem;
+    margin: 0 auto;
+
+    .contacts__block {
+      padding: 6.6rem 3.4rem 6.8rem 6rem;
+      border-radius: 2.2rem;
+      background: #FFFFFF;
+      position: relative;
+    }
+
+    .contacts__block:nth-child(1):after {
+      @include bg;
+      width: 7.7rem;
+      height: 7.7rem;
+      position: absolute;
+      right: -4.6rem;
+      top: 6.6rem;
+      z-index: 1;
+    }
+
+    .contacts__phone {
+      color: #000000FF;
+      font-size: 3.6rem;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: -4%;
+      text-align: left;
+    }
+
+    .contacts__address {
+      margin-top: 5rem;
+      color: #000000FF;
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 3rem;
+      letter-spacing: -0.04rem;
+    }
+
+    .contacts__details-wrapper {
+      margin-top: 4.1rem;
+      display: flex;
+      gap: 5.2rem;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      letter-spacing: -0.04rem;
+
+      .contacts__email {
+        color: #282828FF;
+
+        a {
+          color: #404D59;
+        }
+
+        .contacts__details {
+          color: #282828FF;
+        }
+      }
+    }
+
+    .contacts__block-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem;
+
+      .contacts__input {
+        padding: 1.55rem 3.9rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        border-radius: 2.2rem;
+        background: #E8F3F9;
+        border: none;
+        width: 100%;
+      }
+
+      textarea.contacts__input {
+        resize: none;
+        height: 100%;
+      }
+
+      .contacts__input::placeholder {
+        color: #595959FF;
+      }
+
+      .contacts__input-name {
+        grid-column: 1/2;
+      }
+
+      .contacts__input-email {
+        grid-column: 2/3;
+      }
+
+      .contacts__input-text {
+        grid-column: 1/3;
+        min-height: 11.2rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contacts__checkbox {
+        .checkbox {
+          align-items: flex-start;
+          .checkbox-text {
+            font-size: 1.3rem;
+          }
+        }
+
+      }
+
+      .contacts__button {
+        border-radius: 2.2rem;
+        background: #4C798E;
+        color: #FFFFFFFF;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6.9rem;
+        border: none;
+      }
+    }
+  }
+}
+
+@include media('max', 'xl') {
+  .contacts {
+    .contacts__wrapper {
+      width: 100%;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .contacts {
+    padding: 2rem 0 3rem 0;
+
+    .contacts__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+
+      .contacts__block {
+        padding: 6.6rem 8.1rem 6.8rem 6rem;
+      }
+
+      .contacts__block:nth-child(1):after {
+        right: 8.2rem;
+        top: auto;
+        bottom: -4.5rem;
+      }
+
+    }
+  }
+}
+
+@include media('max', 's') {
+  .contacts {
+    padding: 2.8rem 0;
+
+    .contacts__wrapper {
+      row-gap: 2rem;
+
+      .contacts__block {
+        padding: 3.6rem 2.7rem 4.4rem 2.8rem;
+      }
+
+      .contacts__block:nth-child(1):after {
+        width: 5.5rem;
+        height: 5.5rem;
+        right: 2.7rem;
+        bottom: -3.5rem;
+      }
+
+      .contacts__phone {
+        font-size: 3.2rem;
+      }
+
+      .contacts__address {
+        margin-top: 2rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+
+      .contacts__details-wrapper {
+        margin-top: 2rem;
+        gap: 2rem;
+        font-size: 1.4rem;
+        flex-direction: column;
+      }
+
+      .contacts__block-form {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+
+
+        .contacts__input-email {
+          grid-column: 1/2;
+        }
+
+        .contacts__input-text {
+          grid-column: 1/2;
+        }
+
+        .contacts__checkbox {
+          .checkbox {
+            align-items: center;
+            .checkbox-text {
+              font-size: 1.2rem;
+              line-height: 1.4rem;
+            }
+          }
+
+        }
+
+        .contacts__button {
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+          height: 5rem;
+        }
+      }
+    }
+  }
+}

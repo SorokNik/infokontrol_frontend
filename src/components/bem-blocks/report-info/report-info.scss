@@ -1,0 +1,46 @@
+.report-info {
+  .report-info__items {
+    margin-top: 8rem;
+    .report-info__item-wrap {
+      grid-column: span 4;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      .report-info__item-circle {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        background: #64ADED;
+
+        &-orange {
+          background: #EF810A;
+        }
+
+        &-red {
+          background: #FE485C;
+        }
+      }
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .report-info {
+    .report-info__items {
+      .report-info__item-wrap {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-info {
+    .report-info__items {
+      margin-top: 5rem;
+      .report-info__item-wrap {
+        grid-column: auto;
+      }
+    }
+  }
+}

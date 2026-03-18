@@ -1,0 +1,30 @@
+.report-big-photo {
+  .report-big-photo__wrapper {
+    margin-top: 7rem;
+    .report-big-photo__photo {
+      grid-column: span 7;
+      width: 100%;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .report-big-photo {
+    .report-big-photo__wrapper {
+      .report-big-photo__photo {
+        grid-column: span 6;
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-big-photo {
+    .report-big-photo__wrapper {
+      margin-top: 5rem;
+      .report-big-photo__photo {
+        grid-column: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.date {
+  color: #474747FF;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.04rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.date:before {
+  @include bg;
+  width: 1.75rem;
+  height: 1.85rem;
+}

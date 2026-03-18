@@ -1,0 +1,108 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  background: rgba(30, 34, 40, 0.48);
+  padding: 2rem;
+
+  &.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__wrapper {
+    width: 100%;
+    max-width: 58rem;
+  }
+
+  .modal__content {
+    background: #FFFFFF;
+    border-radius: 2.2rem;
+    padding: 3.4rem 3.2rem;
+    box-shadow: 0 1.2rem 4rem rgba(30, 34, 40, 0.2);
+  }
+
+  .modal__title {
+    color: #1E2228;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .modal__report-name {
+    color: #4C798E;
+  }
+
+  .modal__actions {
+    margin-top: 2.8rem;
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .modal__button {
+    min-height: 5rem;
+    min-width: 14.4rem;
+    padding: 1.2rem 2.4rem;
+    border-radius: 1.6rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: background-color .2s ease, color .2s ease;
+  }
+
+  .modal__button--yes {
+    background: #E8F3F9;
+    color: #1E2228;
+  }
+
+  .modal__button--yes:hover {
+    background: #D7EAF5;
+  }
+
+  .modal__button--no {
+    background: #FF3737;
+    color: #FFFFFF;
+  }
+
+  .modal__button--no:hover {
+    background: #E32F2F;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@include media('max', 's') {
+  .modal {
+    padding: 1.6rem;
+
+    .modal__content {
+      border-radius: 1.8rem;
+      padding: 2.2rem 1.8rem;
+    }
+
+    .modal__title {
+      font-size: 1.8rem;
+    }
+
+    .modal__actions {
+      margin-top: 2.2rem;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal__button {
+      width: 100%;
+      min-height: 4.6rem;
+      font-size: 1.6rem;
+      border-radius: 1.4rem;
+    }
+  }
+}

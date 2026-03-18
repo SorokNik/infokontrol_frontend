@@ -1,0 +1,117 @@
+.report-review {
+  padding: 11.2rem 0;
+  background-color: #FFFFFF;
+  .report-review__head {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    .report-review__mark {
+      width: 24rem;
+      height: 18rem;
+      @include bg;
+    }
+    .report-review__title-block {
+      .report-subtitle {
+        margin-top: 2rem;
+      }
+    }
+  }
+  .report-review__items {
+    margin-top: 10rem;
+    .report-review__item {
+      grid-column: span 2;
+      .report-point{
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          background: #64ADED;
+          width: 0.8rem;
+          height: 0.8rem;
+          border-radius: 0.8rem;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -1.2rem;
+        }
+      }
+
+    }
+  }
+}
+
+@include media('max', 'l') {
+  .report-review {
+    .report-review__items {
+      .report-review__item {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .report-review {
+    padding: 6rem 0;
+    .report-review__head {
+      gap: 2.5rem;
+    }
+    .report-review__items {
+      margin-top: 6rem;
+      .report-review__item {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-review {
+    padding: 2.8rem 0;
+    .report-review__head {
+      gap: 2.4rem;
+      .report-review__mark {
+        width: 12rem;
+        height: 9rem;
+        flex-shrink: 0;
+      }
+      .report-review__title-block {
+        .report-subtitle {
+          margin-top: 0.6rem;
+          line-height: 120%;
+        }
+      }
+    }
+    .report-review__items {
+      margin-top: 3.5rem;
+      .report-review__item {
+        grid-column: auto;
+        //display: flex;
+        //gap: 1rem;
+        //display: inline;
+        .report-point{
+          position: relative;
+          display: inline;
+          &:before {
+            content: '';
+            display: block;
+            background: #64ADED;
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 0.8rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -1.2rem;
+          }
+        }
+
+        .report-text {
+          margin-top: 0;
+          display: inline;
+        }
+
+      }
+    }
+  }
+}

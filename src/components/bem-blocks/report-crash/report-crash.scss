@@ -1,0 +1,102 @@
+.report-crash {
+  .report-crash__title-block {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .report-crash__items {
+    margin-top: 6rem;
+    .report-crash__item {
+      grid-column: span 4;
+    }
+  }
+
+  .report-crash__car-wrapper {
+    margin-top: 7rem;
+    .report-crash__car-img {
+      grid-column: span 7;
+      width: 100%;
+    }
+    .report-crash__car-items {
+      grid-column: span 5;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      .report-crash__car-item-wrapper {
+        display: flex;
+        gap: 2.5rem;
+        align-items: flex-start;
+        .report-crash__circle {
+          flex-shrink: 0;
+          width: 4.7rem;
+          height: 4.7rem;
+          border-radius: 100%;
+          border: 1px solid #868686;
+          &-blue{
+            background-color: #42AAFF;
+          }
+          &-red{
+            background-color: #FD0C1F;
+          }
+          &-yellow{
+            background-color: #FFFF00;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .report-crash {
+    .report-crash__title-block {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .report-crash__items {
+      margin-top: 5rem;
+      .report-crash__item {
+        grid-column: span 3;
+      }
+    }
+
+    .report-crash__car-wrapper {
+      margin-top: 5rem;
+      .report-crash__car-img {
+        grid-column: span 6;
+      }
+      .report-crash__car-items {
+        grid-column: span 6;
+      }
+    }
+  }
+}
+
+@include media('max', 's') {
+  .report-crash {
+    .report-crash__title-block {
+      gap: 3.5rem;
+      .report-crash__flash-point {
+        width: 100%;
+      }
+    }
+
+    .report-crash__items {
+      margin-top: 2.5rem;
+      .report-crash__item {
+        grid-column: auto;
+      }
+    }
+
+    .report-crash__car-wrapper {
+      .report-crash__car-img {
+        grid-column: auto;
+      }
+      .report-crash__car-items {
+        grid-column: auto;
+      }
+    }
+  }
+}

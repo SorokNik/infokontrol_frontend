@@ -1,0 +1,20 @@
+<section class="registration-form">
+    <div class="container">
+        <div class="registration-form__wrapper">
+            <form action="" class="registration-form__form">
+                <input type="email" name="email" id="" class="registration-form__email" placeholder="E-mail">
+                <input type="password" name="password" id="" class="registration-form__password" placeholder="Пароль">
+                <input type="password" name="password-repeat" id="" class="registration-form__password"
+                       placeholder="Повтор пароля">
+                <div class="registration-form__checkbox-block">
+                    @@include('../checkbox/checkbox.html', {"checkbox-text":"Я принимаю положения и условия.",})
+                </div>
+                <button type="submit" class="registration-form__button">Зарегистрироваться</button>
+            </form>
+            <div class="registration-form__registration-block">
+                <div class="registration-form__question --svg__arrow-after">У вас уже есть учетная запись?</div>
+                <a href="#" class="registration-form__registration-link">Войти здесь</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+.example-link {
+  color: #404D59;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-left: 3.2rem;
+  position: relative;
+}
+
+.example-link::before {
+  @include bg;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  height: 1.9rem;
+}
+
+@include media('max', 'm') {
+  .example-link {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    white-space: nowrap;
+  }
+}

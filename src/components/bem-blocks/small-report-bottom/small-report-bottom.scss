@@ -1,0 +1,52 @@
+.small-report-bottom {
+  background: #E8F3F9;
+  padding: 8.6rem 0;
+
+  .small-report-bottom__title-block {
+    padding: 0 14.6rem;
+  }
+
+  .small-report-bottom__form {
+    margin-top: 4.3rem;
+  }
+
+  .small-report-bottom__tariffs {
+    margin-top: 6.1rem;
+  }
+}
+
+@include media('max', 'xl') {
+  .small-report-bottom {
+    .small-report-bottom__title-block {
+      padding: 0;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .small-report-bottom {
+    padding: 5rem 0;
+
+    .small-report-bottom__form {
+      margin-top: 1.8rem;
+    }
+
+    .small-report-bottom__tariffs {
+      margin-top: 6.5rem;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .small-report-bottom {
+    padding: 2.9rem 0;
+
+    .small-report-bottom__form {
+      margin-top: 2.3rem;
+    }
+
+    .small-report-bottom__tariffs {
+      margin-top: 9.4rem;
+    }
+  }
+}
