@@ -97,8 +97,14 @@
     width: 14.9rem;
     height: 14.7rem;
     flex-shrink: 0;
+    position: relative;
+    top: -3rem;
     @include bg;
     background-image: url("../img/found/not-found.webp");
+
+    &_found {
+      background-image: url("../img/found/found.webp");
+    }
   }
 
   .reports-selection__status-text {
@@ -178,6 +184,12 @@
     gap: 0.7rem;
     padding: 1rem;
     text-align: center;
+
+    &_found {
+      .reports-selection__stat-value {
+        color: #F9A930;
+      }
+    }
   }
 
   .reports-selection__stat-title {
@@ -245,6 +257,8 @@
     .reports-selection__status-image {
       width: 10rem;
       height: 10rem;
+      position: static;
+      top: auto;
     }
 
     .reports-selection__status-title {
