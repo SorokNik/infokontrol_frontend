@@ -1,13 +1,14 @@
 <section class="registration-form">
     <div class="container">
         <div class="registration-form__wrapper">
+            <div class="registration-form__title">Введите ваш номер мобильного телефона, на него будет отправлена смс с подтверждением</div>
             <form action="" class="registration-form__form">
-                <input type="email" name="email" id="" class="registration-form__email" placeholder="E-mail">
+                <input type="tel" name="phone" id="" class="registration-form__email registration-form__email--error" placeholder="Номер телефона">
                 <input type="password" name="password" id="" class="registration-form__password" placeholder="Пароль">
                 <input type="password" name="password-repeat" id="" class="registration-form__password"
                        placeholder="Повтор пароля">
                 <div class="registration-form__checkbox-block">
-                    @@include('../checkbox/checkbox.html', {"checkbox-text":"Я принимаю положения и условия.",})
+                    @@include('../checkbox/checkbox.html', {"checkbox-text":"Я даю <a href='#'>Согласие</a> на обработку моих персональных данных в соответствии с <a href='#'>Политикой конфидециальности</a> и ознакомлен с <a href='#'>Правилами работы сервиса</a>",})
                 </div>
                 <button type="submit" class="registration-form__button">Зарегистрироваться</button>
             </form>
@@ -18,3 +19,26 @@
         </div>
     </div>
 </section>
+
+
+<!--СТРАНИЧКА С ВВОДОМ КОДА-->
+
+<!--<section class="registration-form">-->
+<!--    <div class="container">-->
+<!--        <div class="registration-form__wrapper">-->
+<!--            <div class="registration-form__title">Введите проверочный код из СМС отправленный на указанный номер</div>-->
+<!--            <form action="" class="registration-form__form">-->
+<!--                <input type="number" class="registration-form__email registration-form__email&#45;&#45;error" placeholder="Код из СМС">-->
+<!--                <button type="submit" class="registration-form__button">Зарегистрироваться</button>-->
+<!--            </form>-->
+<!--            <div class="registration-form__registration-block registration-form__registration-block-sms">-->
+<!--                <div class="registration-form__question &#45;&#45;svg__short-arrow-after">Повторная отправка доступна через 00:59</div>-->
+<!--                <a href="#" class="registration-form__registration-link">Отправить снова</a>-->
+<!--            </div>-->
+<!--            <div class="registration-form__registration-block">-->
+<!--                <div class="registration-form__question &#45;&#45;svg__arrow-after">У вас уже есть учетная запись?</div>-->
+<!--                <a href="#" class="registration-form__registration-link">Войти здесь</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->

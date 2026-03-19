@@ -51,13 +51,13 @@
 
 
 	<!-- Авторизация		-->
-				<main class="main">
-					@@include('components/bem-blocks/top/top.html', {
-					"title-small":"Личный кабинет",
-					"title-big":"Вход в систему",
-					})
-					@@include('components/bem-blocks/authorization-form/authorization-form.html')
-		        </main>
+<!--				<main class="main">-->
+<!--					@@include('components/bem-blocks/top/top.html', {-->
+<!--					"title-small":"Личный кабинет",-->
+<!--					"title-big":"Вход в систему",-->
+<!--					})-->
+<!--					@@include('components/bem-blocks/authorization-form/authorization-form.html')-->
+<!--		        </main>-->
 	<!-- Авторизация		-->
 
 	<!-- Регистрация		-->
@@ -242,6 +242,14 @@
 <!--		@@include('components/bem-blocks/report-big-photo/report-big-photo.html')-->
 <!--	</main>-->
 	<!-- ОТЧЕТ ПОЛНЫЙ		-->
+
+	<!-- РЕДИЗАЙН СТРАНИЦЫ С ВЫБОРОМ ОТЧËТОВ		-->
+
+	<main class="main">
+		@@include('components/bem-blocks/reports-selection/reports-selection.html')
+	</main>
+
+	<!-- РЕДИЗАЙН СТРАНИЦЫ С ВЫБОРОМ ОТЧËТОВ		-->
 
 	@@include('components/page-blocks/footer/_footer.html')
 	@@include('components/page-blocks/_scripts.html')
