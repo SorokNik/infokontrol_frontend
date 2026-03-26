@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.9rem;
+  margin-top: 3rem;
 
   &.tariffs__text-only {
     display: block;
@@ -14,10 +15,16 @@
         font-size: 1.9rem;
         text-align: justify;
 
-        p {
+        //ul {
+        //  margin-top: 2rem;
+        //}
+        li {
           margin-top: 2rem;
           &:first-child {
             margin-top: 0;
+          }
+          &:last-child {
+            margin-bottom: 2rem;
           }
         }
       }
@@ -26,6 +33,10 @@
       }
     }
 
+  }
+
+  &:first-child {
+    margin-top: 0;
   }
 
   .tariffs__item {

@@ -9,6 +9,7 @@
       flex-shrink: 0;
       width: 4.9rem;
       height: 2.5rem;
+
       svg {
         width: 100%;
         height: 100%;
@@ -139,6 +140,7 @@
           flex-direction: column;
           justify-content: space-between;
           height: 100%;
+
           .header__nav-links {
             gap: 4.7rem;
             flex-direction: column;
@@ -266,6 +268,223 @@
       top: 50%;
       right: -0.2rem;
       transform: translateY(-50%);
+    }
+  }
+}
+
+.header--lk {
+  padding: 4.5rem 0;
+  background: #FFFFFF;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .header__services {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    min-width: 18rem;
+  }
+
+  .header__service-link {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background: #4C798E;
+    position: relative;
+    flex-shrink: 0;
+
+    &::after {
+      width: 2.6rem;
+      height: 2.1rem;
+      @include bg($size: contain);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .header__service-link_exit {
+    &::after {
+      width: 2.6rem;
+      height: 2.1rem;
+    }
+  }
+
+  .header__service-link_message {
+    &::before {
+      width: 1.8rem;
+      height: 1.8rem;
+      @include bg($size: contain);
+      position: absolute;
+      top: -0.4rem;
+      right: -0.4rem;
+    }
+  }
+
+  .header__logo {
+    flex-shrink: 0;
+  }
+
+  .container .header__logo_big {
+    width: 12.9rem;
+    height: 6.75rem;
+    margin-left: auto;
+    margin-right: 20rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #1E2228;
+    }
+  }
+
+  .header__profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2.9rem;
+    min-width: 55rem;
+  }
+
+  .header__balance {
+    height: 6.7rem;
+    width: 27.6rem;
+    border: 0.1rem solid #4C798E;
+    border-radius: 2.2rem;
+    color: #404D59;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    padding: 2.4rem 2.9rem;
+    flex-shrink: 0;
+  }
+
+  .header__mail {
+    color: #404D59;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    max-width: 24rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header__user {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background: #4C798E;
+    position: relative;
+    flex-shrink: 0;
+
+    &::after {
+      width: 2.7rem;
+      height: 2.7rem;
+      @include bg($size: contain);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@include media('max', 'xl') {
+  .header--lk {
+    .container .header__logo_big {
+      margin-right: 10rem;
+    }
+  }
+}
+
+@include media('max', 'm') {
+  .header--lk {
+    padding: 2.8rem 0;
+
+    .header__profile {
+      min-width: 43rem;
+      gap: 1.4rem;
+    }
+
+    .container .header__logo_big {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .header__balance {
+      width: 23rem;
+      padding: 2.4rem 1.8rem;
+    }
+
+    .header__mail {
+      max-width: 16rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
+  }
+}
+
+@include media('max', 's') {
+  .header--lk {
+    padding: 1.8rem 0;
+
+    .container {
+      gap: 1rem;
+    }
+
+    .header__services {
+      gap: 0.8rem;
+      min-width: auto;
+    }
+
+    .header__service-link {
+      width: 4rem;
+      height: 4rem;
+
+      &::after {
+        width: 2rem;
+        height: 1.7rem;
+      }
+    }
+
+    .header__service-link_message {
+      &::before {
+        width: 1.3rem;
+        height: 1.3rem;
+        top: -0.2rem;
+        right: -0.2rem;
+      }
+    }
+
+    .container .header__logo_big {
+      width: 9.6rem;
+      height: 5rem;
+    }
+
+    .header__profile {
+      min-width: auto;
+      gap: 0.8rem;
+    }
+
+    .header__balance,
+    .header__mail {
+      display: none;
+    }
+
+    .header__user {
+      width: 4rem;
+      height: 4rem;
+
+      &::after {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
     }
   }
 }

@@ -27,12 +27,17 @@
       margin: 5.5rem auto 0 auto;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
       gap: 1.7rem;
 
+      .registration-form__input-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-      .registration-form__email,
-      .registration-form__password {
+      input.registration-form__email.form-control,
+      input.registration-form__password.form-control {
         display: block;
         width: 100%;
         height: 9.7rem;
@@ -41,9 +46,33 @@
         background: #E8F3F9;
         font-size: 2.4rem;
         font-weight: 400;
-        line-height: 1;
+        line-height: normal;
         letter-spacing: -0.048rem;
         border: none;
+        box-shadow: none;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      .registration-form__input-wrapper .help-block {
+        min-height: 4.4rem;
+        margin-top: 1rem;
+        border-radius: 1.2rem;
+        padding: 0 3.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -0.032rem;
+      }
+
+      .registration-form__input-wrapper .help-block:empty {
+        display: none;
       }
 
       .registration-form__button {
@@ -63,8 +92,12 @@
       }
 
       .registration-form__checkbox-block {
-        width: 46.7rem;
+        //width: 46.7rem;
+        //display: flex;
+        //justify-content: center;
+        width: 100%;
         .checkbox {
+          width: 100%;
           align-items: flex-start;
         }
       }
@@ -80,23 +113,24 @@
         color: #595959;
         font-size: 1.6rem;
         font-weight: 400;
-        line-height: 1.2;
+        line-height: normal;
         display: inline-flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
+        margin-right: 2.2rem;
 
         &:after {
           @include bg;
           width: 6.4rem;
           height: 1rem;
-          margin-right: 2rem;
+          margin-right: 0;
         }
       }
 
       .registration-form__registration-link {
         color: #404D59;
         font-size: 1.6rem;
-        line-height: 1.2;
+        line-height: normal;
       }
 
       &-sms {
@@ -127,13 +161,13 @@
       border-radius: 4rem;
       padding: 4.8rem 5.6rem 5.8rem 5.6rem;
 
+      .registration-form__title {
+        margin-bottom: 3.8rem;
+        font-size: 2.2rem;
+      }
+
       .registration-form__form {
         max-width: 100%;
-
-        .registration-form__title {
-          margin-bottom: 3.8rem;
-          font-size: 2.2rem;
-        }
 
         .registration-form__email,
         .registration-form__password,
@@ -141,6 +175,13 @@
           height: 8rem;
           font-size: 2rem;
           letter-spacing: -0.04rem;
+        }
+
+        .registration-form__input-wrapper .help-block {
+          min-height: 4rem;
+          padding: 0 2.4rem;
+          font-size: 1.4rem;
+          letter-spacing: -0.02rem;
         }
 
         .registration-form__checkbox-block {
@@ -190,6 +231,14 @@
           letter-spacing: -0.02rem;
         }
 
+        .registration-form__input-wrapper .help-block {
+          min-height: 3.8rem;
+          border-radius: 1rem;
+          padding: 0 1.6rem;
+          font-size: 1.3rem;
+          line-height: 1.3;
+        }
+
         .registration-form__checkbox-block {
           width: 100%;
         }
@@ -206,6 +255,7 @@
         .registration-form__question {
           display: inline-flex;
           gap: 1.2rem;
+          margin-right: 0;
         }
 
         .registration-form__question:after {

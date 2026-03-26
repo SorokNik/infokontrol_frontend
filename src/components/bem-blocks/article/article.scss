@@ -62,6 +62,42 @@
       font-size: 1.6rem;
       line-height: 2.5rem;
       letter-spacing: -0.04rem;
+
+      #return {
+
+        p {
+          margin: 0;
+          color: #474747;
+          font-size: 1.8rem;
+          line-height: 2.7rem;
+        }
+
+        p + p {
+          margin-top: 1rem;
+        }
+
+        b {
+          color: #1E2228;
+          font-weight: 600;
+        }
+
+        .link {
+          margin-top: 2rem;
+
+          a {
+            color: #3A6D87;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-thickness: 0.1rem;
+            text-underline-offset: 0.25rem;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: #285166;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -94,6 +130,14 @@
       }
       .article__text {
         margin-top: 2.8rem;
+
+        #return {
+
+          p {
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+          }
+        }
       }
     }
   }
@@ -139,6 +183,20 @@
       }
       .article__text {
         margin-top: 3.7rem;
+
+        #return {
+          padding: 2.2rem 2.4rem;
+          border-radius: 1.8rem;
+
+          p {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+          }
+
+          .link {
+            margin-top: 1.8rem;
+          }
+        }
       }
     }
   }

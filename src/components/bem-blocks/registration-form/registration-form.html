@@ -2,13 +2,23 @@
     <div class="container">
         <div class="registration-form__wrapper">
             <div class="registration-form__title">Введите ваш номер мобильного телефона, на него будет отправлена смс с подтверждением</div>
-            <form action="" class="registration-form__form">
-                <input type="tel" name="phone" id="" class="registration-form__email registration-form__email--error" placeholder="Номер телефона">
-                <input type="password" name="password" id="" class="registration-form__password" placeholder="Пароль">
-                <input type="password" name="password-repeat" id="" class="registration-form__password"
-                       placeholder="Повтор пароля">
+            <form id="w0" class="registration-form__form" action="/registration" method="post" onsubmit="return false;">
+                <input type="hidden" name="_csrf" value="ASpUf-gu6Q7WYPLvYDgBvxu1Roojhe73JjkzEwmhJYdIfS5PoUuQRKcjiKoZYUX1cfkk1XO1w4YeSnliWvlu6A==">
+                <div class="registration-form__input-wrapper registration-form__input-wrapper--email field-registrationform-email">
+                    <input type="email" id="registrationform-email" class="registration-form__email form-control" name="RegistrationForm[email]" placeholder="E-mail" aria-required="true" aria-invalid="true"><div class="help-block">Необходимо заполнить «E-mail».</div>
+                </div>
+                <div class="registration-form__input-wrapper registration-form__input-wrapper--password field-registrationform-password required">
+                    <input type="password" id="registrationform-password" class="registration-form__password form-control" name="RegistrationForm[password]" placeholder="Пароль" aria-required="true"><div class="help-block"></div>
+                </div>
+                <div class="registration-form__input-wrapper registration-form__input-wrapper--password-confirm field-registrationform-passwordconfirm required">
+                    <input type="password" id="registrationform-passwordconfirm" class="registration-form__password form-control" name="RegistrationForm[passwordConfirm]" placeholder="Повтор пароля" aria-required="true"><div class="help-block"></div>
+                </div>
                 <div class="registration-form__checkbox-block">
-                    @@include('../checkbox/checkbox.html', {"checkbox-text":"Я даю <a href='#'>Согласие</a> на обработку моих персональных данных в соответствии с <a href='#'>Политикой конфидециальности</a> и ознакомлен с <a href='#'>Правилами работы сервиса</a>",})
+
+                    <div class="checkbox">
+                        <div class="custom-checkbox"><input type="hidden" name="RegistrationForm[confirmRule]" value="0"><input type="checkbox" id="check" name="RegistrationForm[confirmRule]" value="1" aria-required="true"><label class="control-label" for="check"></label></div>
+                        <div class="checkbox-text"> Я даю согласие на <a href="/personal">обработку моих персональных данных</a> в соответствии с <a href="/privacy">политикой конфиденциальности</a> и ознакомлен с <a href="/tariff">правилами</a> работы сервиса</div>
+                    </div>
                 </div>
                 <button type="submit" class="registration-form__button">Зарегистрироваться</button>
             </form>

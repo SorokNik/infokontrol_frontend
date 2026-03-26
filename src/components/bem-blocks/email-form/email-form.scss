@@ -13,10 +13,11 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    z-index: 10;
   }
 
   .email-form__input {
-    width: 86.5rem;
+    width: 70rem;
     padding: 2.1rem 3.9rem;
     border: none;
     border-radius: 2.2rem;
@@ -47,6 +48,8 @@
     font-weight: 700;
     text-align: left;
     margin-left: 2.5rem;
+    width: 45rem;
+    flex-shrink: 0;
   }
 
   .email-form__timer-wrapper {
@@ -77,18 +80,14 @@
 @include media('max', 'xl') {
   .email-form {
     padding: 0;
-  }
-}
 
-@include media('max', 'l') {
-  .email-form {
     .email-form__input {
-      width: 65rem;
+      width: 60rem;
     }
   }
 }
 
-@include media('max', 'm') {
+@include media('max', 'l') {
   .email-form {
     flex-wrap: wrap;
     row-gap: 2rem;
@@ -120,8 +119,24 @@
   }
 }
 
+@include media('max', 'm') {
+  .email-form {
+    justify-content: center;
+
+
+    .email-form__discount {
+      margin-left: 0;
+    }
+
+    .email-form__timer-wrapper {
+      margin: 0;
+    }
+  }
+}
+
 @include media('max', 's') {
   .email-form {
+    justify-content: flex-start;
 
     .email-form__input {
       padding: 1.5rem 2.5rem;
@@ -131,9 +146,10 @@
 
     .email-form__offer,
     .email-form__discount {
-      width: 13rem;
+      width: 100%;
       font-size: 2rem;
       line-height: 2.4rem;
+      text-align: left;
     }
 
     .email-form__timer-wrapper {

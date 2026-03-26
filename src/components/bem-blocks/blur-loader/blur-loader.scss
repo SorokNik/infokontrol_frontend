@@ -37,30 +37,44 @@
   display: grid;
   -webkit-mask:linear-gradient(#000 0 0);
   animation: s10 2s infinite linear;
+
+  &::before,
+  &::after{
+    content:"";
+    grid-area: 1/1;
+    width:50%;
+    background:
+            radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
+            radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
+            radial-gradient(farthest-side,var(--g2)) calc(var(--R) + 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+            radial-gradient(farthest-side,var(--g1)) 0 calc(-1*var(--R)),
+            radial-gradient(farthest-side,var(--g2)) calc(var(--R) - 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+            radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
+            radial-gradient(farthest-side,var(--g2)) calc(-1*var(--R))  0,
+            radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) + 0.5*var(--R)   - var(--R));
+    background-size:calc(2*var(--R)) calc(2*var(--R));
+    background-repeat:no-repeat;
+  }
+
+  &::after {
+    transform:rotate(180deg);
+    transform-origin:right;
+  }
 }
 
-.custom-loader::before,
-.custom-loader::after{
-  content:"";
-  grid-area: 1/1;
-  width:50%;
+.progress-bar {
+  width:12rem;
+  height:2rem;
+  border-radius: 2rem;
   background:
-          radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
-          radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
-          radial-gradient(farthest-side,var(--g2)) calc(var(--R) + 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
-          radial-gradient(farthest-side,var(--g1)) 0 calc(-1*var(--R)),
-          radial-gradient(farthest-side,var(--g2)) calc(var(--R) - 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
-          radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
-          radial-gradient(farthest-side,var(--g2)) calc(-1*var(--R))  0,
-          radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) + 0.5*var(--R)   - var(--R));
-  background-size:calc(2*var(--R)) calc(2*var(--R));
-  background-repeat:no-repeat;
+          repeating-linear-gradient(135deg,#f9a930 0 10px,#f9a930bf 0 20px) left/0% 100%   no-repeat,
+          repeating-linear-gradient(135deg,#f9a93033    0 10px,#f9a9301a    0 20px) left/100% 100%;
 }
 
-.custom-loader::after {
-  transform:rotate(180deg);
-  transform-origin:right;
+@keyframes filling {
+  100% {background-size:100% 100%}
 }
+
 
 @keyframes s10 {
   100% {transform: rotate(-1turn)}

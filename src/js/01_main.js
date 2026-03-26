@@ -6,10 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
         tabs = document.querySelectorAll('.order-form__number-type'),
         input = document.querySelector('.order-form__input');
 
-    hamburger.addEventListener("click", () => {
-        header.classList.toggle("open");
-        document.body.classList.toggle("open");
-    });
+    // Меню-бургер есть не на всех версиях header (например, в новом LK-хедере его нет),
+    // поэтому обязательно проверяем наличие элемента перед подпиской на клик.
+    if (hamburger && header) {
+        hamburger.addEventListener("click", () => {
+            header.classList.toggle("open");
+            document.body.classList.toggle("open");
+        });
+    }
 
     questionPoints.forEach((questionPoint, i) => {
         questionPoint.addEventListener("click", () => {
@@ -205,9 +209,48 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    /**
+     * Логика раскрытия/сворачивания подробной информации в блоке `reports-list__order`.
+     *
+     * Разметка работает по схеме:
+     * 1) `.reports-list__order-brief` — краткая часть (ФИО + дата)
+     * 2) `.reports-list__order-toggle` — кнопка "Данные найдены" / "Свернуть"
+     * 3) `.reports-list__order-details` — подробная часть (скрывается/показывается)
+     */
+    const reportsOrderToggles = document.querySelectorAll('.reports-list__order-toggle');
 
+    if (reportsOrderToggles.length > 0) {
+        reportsOrderToggles.forEach((toggleButton) => {
+            // Ищем родительский блок конкретного заказа, чтобы работать только в его пределах.
+            const orderBlock = toggleButton.closest('.reports-list__order');
 
+            if (!orderBlock) {
+                return;
+            }
 
-    
+            // Находим подробный блок, который нужно прятать/показывать.
+            const orderDetails = orderBlock.querySelector('.reports-list__order-details');
+
+            if (!orderDetails) {
+                return;
+            }
+
+            // При первом рендере синхронизируем текст кнопки с текущим состоянием (hidden или открыт).
+            const setToggleState = (isExpanded) => {
+                toggleButton.setAttribute('aria-expanded', String(isExpanded));
+                toggleButton.textContent = isExpanded ? 'Свернуть' : 'Данные найдены';
+            };
+
+            setToggleState(!orderDetails.hidden);
+
+            // По клику просто инвертируем состояние hidden у подробного блока
+            // и обновляем подпись кнопки.
+            toggleButton.addEventListener('click', () => {
+                const shouldExpand = orderDetails.hidden;
+                orderDetails.hidden = !shouldExpand;
+                setToggleState(shouldExpand);
+            });
+        });
+    }
 
 })
